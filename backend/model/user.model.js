@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 
 let UserSchema = mongoose.Schema({
-    name: { type: String, required: true },
-    level: { type: Number, required: true },
+    name: { type: String, required: true, unique:true },
+    level: { type: String, required: true,enum:["High","Medium","Low"], default:"Low"},
     score: { type: Number, default: 0 }
     
     
