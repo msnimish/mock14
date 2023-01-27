@@ -3,7 +3,6 @@ import dotenv from "dotenv";
 import cors from "cors";
 import connection from "./config/db.js";
 import user from "./routes/user.route.js";
-import job from "./routes/job.routes.js";
 
 
 dotenv.config();
@@ -14,7 +13,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use("/user", user);
-app.use("/job", job);
 
 
 
